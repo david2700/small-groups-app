@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominion City London - Connect Groups</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Dominion City London Connect Groups!</h1>
+        <p>Connect. Community. Grow</p>
+        <div class="cta">
+            <a href="#form">Join a Connect Group</a>
+            <a href="#form">Start or Co-Lead a Connect Group</a>
+        </div>
+    </header>
+
+     <div class="content">
+        <h2>Why Join a Connect Group?</h2>
+        <div class="two-column">
+            <div>
+                <h3>Community</h3>
+                <p>By joining a Connect Group, you become part of a supportive and close-knit small group within the church family, just as we see in Acts 2:44-47. Together, we grow, share, and celebrate life, building meaningful relationships that strengthen our faith.</p>
+            </div>
+            <img src="images/community.jpg" alt="Community">
+        </div>
+
+        <div class="two-column">
+            
+            <div>
+                <h3>Devotion</h3>
+                <p>A Connect Group helps you cultivate a deeper relationship with God beyond Sunday Services (Acts 2:42-43). It’s a space where you can dive deeper into Scripture, share your spiritual journey, and encourage one another in devotion to God.</p>
+            </div>
+            <img src="images/devotion.jpg" alt="Devotion">
+        </div>
+
+        <div class="two-column">
+            <div>
+                <h3>Compassion</h3>
+                <p>In our Connect Groups, we create an environment where compassion and hospitality are key. We embrace the spirit of Luke 10:25-37, reaching out to those in need, offering support, and inviting others into the love of Christ, especially those who are unchurched or seeking.</p>
+            </div>
+            <img src="images/compassion.jpg" alt="Compassion">
+        </div>
+
+        <div class="two-column">
+            
+            <div>
+                <h3>Leadership</h3>
+                <p>Joining a Connect Group is more than just fellowship—it’s about growing into leadership. As you participate, you’ll be equipped to lead and disciple others, following the biblical example of raising leaders through intentional community (2 Timothy 2:2, Exodus 18:17-23, 1 Timothy 4:13-16).</p>
+            </div>
+            <img src="images/leadership.jpg" alt="Leadership">
+        </div>
+
+        <h2>What Happens in a Connect Group?</h2>
+        <div class="three-column">
+            <div class="card">
+                <img src="images/biblestudy.jpg" alt="Bible Study">
+                <h4>Bible Study</h4>
+                <p>Discover and grow in God’s Word together.</p>
+            </div>
+            <div class="card">
+                <img src="images/prayer-hands.jpg" alt="Prayer">
+                <h4>Prayer</h4>
+                <p>Pray for one another and grow spiritually.</p>
+            </div>
+            <div class="card">
+                <img src="images/Fellowship.jpg" alt="Fellowship">
+                <h4>Fellowship</h4>
+                <p>Build lasting friendships over shared interests.</p>
+            </div>
+            <div class="card">
+                <img src="images/service.jpg" alt="Service">
+                <h4>Service</h4>
+                <p>Engage in community outreach and service projects.</p>
+            </div>
+        </div>
+
+         <div id="form" class="form-container">
+            <h2>Join a Connect Group</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="group">Preferred Group:</label>
+                <select id="group" name="group" required>
+                    <option value="community">Community</option>
+                    <option value="devotion">Devotion</option>
+                    <option value="compassion">Compassion</option>
+                    <option value="leadership">Leadership</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <img src="images/Logo.jpg" alt="DC Logo">
+        <p>&copy; 2025 Dominion City Church. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
