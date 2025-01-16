@@ -6,45 +6,67 @@ body {
     color: #333;
 }
 
+/* #border {
+    border: solid 1px red;
+} */
+
 header {
     position: relative;
-    height: 60vh;
-    background: url('images/community.jpg') no-repeat center center/cover;
+    height: 70vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), 
+                      url('images/community.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: bold;
     margin: 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 header p {
-    margin: 0.5rem 0;
-    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    opacity: 0.9;
 }
 
 header .cta {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
 }
 
 header .cta a {
-    margin: 0 0.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: #0056b3;
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 header .cta a:hover {
     background-color: #003f7f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .content {
@@ -57,57 +79,122 @@ header .cta a:hover {
 }
 
 .content h2 {
-    color: #0056b3;
+    color: #0056b3; /* Keep the blue color */
     text-align: center;
     margin-bottom: 1.5rem;
+    font-size: 2rem; /* Adjust for a more prominent appearance */
+    font-weight: 700; /* Make the text bold */
+    text-transform: uppercase; /* Add emphasis with uppercase text */
+    letter-spacing: 1px; /* Slight spacing for better readability */
+    position: relative; /* For decorative underline */
+}
+
+.content h2::after {
+    content: "";
+    display: block;
+    width: 60px; /* Adjust the underline width */
+    height: 4px;
+    background-color: #0056b3; /* Match the blue color */
+    margin: 0.5rem auto 0; /* Center the underline */
+    border-radius: 2px; /* Soften the edges of the underline */
+}
+
+.grid-container {
+    display: grid;
+    gap: 2rem;
 }
 
 .two-column {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    margin-bottom: 2rem;
+    gap: 2rem;
 }
 
 
 .two-column img {
-    flex: none;
     border-radius: 8px;
-    max-width: 100%;
-    height: 300px; /* Set a consistent height */
-    object-fit: cover; /* Ensures the images retain their aspect ratio */
-    width: 100%; /* Ensure the width adjusts to the container */
+    width: 100%;
+    display: block;/* Ensure the width adjusts to the container */
 }
 
+.grid-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
 
-.two-column div {
-    flex: 1;
+.grid-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+.grid-text h3:hover {
+    transform: translateY(-5px);
+    color: #0056b3;
+}
+
+.grid-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 300;
 }
 
 .three-column {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .three-column .card {
-    flex: 1 1 calc(25% - 1rem);
-    max-width: calc(25% - 1rem);
-    background: #f9f9f9;
-    padding: 1rem;
+    background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    padding: 1.5rem;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.three-column .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .three-column img {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
-    border-radius: 8px;
+    border-radius: 12px;
+}
+
+.three-column h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.three-column p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
 }
 
 .form-container {
@@ -163,17 +250,90 @@ footer img {
 }
 
 @media (max-width: 768px) {
+    .content h2 {
+        font-size: 1.5rem; /* Slightly smaller for better fit */
+    }
+    .content h2::after {
+        width: 40px; /* Reduce underline width */
+    }
+    .two-column {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        text-align: center;
+    }
+    header {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.4rem;
+    }
+
+    header .cta {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 1rem;
+    }
+
+    header .cta a {
+        width: auto; /* Ensure buttons don't stretch full-width */
+        max-width: 90%; /* Limit the button width to fit within the container */
+        margin: 0 auto; /* Center the buttons */
+        text-align: center; /* Ensure text is centered */
+    }
+
     .two-column {
         flex-direction: column;
         text-align: center;
     }
 
+    .grid-text {
+        order: 1;
+    }
+
+    .grid-image {
+        order: 2;
+    }
+
+    .grid-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .grid-text p {
+        font-size: 1rem;
+    }
+
+    .three-column {
+        gap: 1rem;
+    }
+
     .three-column .card {
-        flex: 1 1 100%;
-        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .three-column h4 {
+        font-size: 1.25rem;
+    }
+
+    .three-column p {
+        font-size: 0.95rem;
     }
 
     .form-container {
         width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce text size on very small screens */
+    .grid-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .grid-text p {
+        font-size: 0.9rem;
     }
 }
